@@ -48,7 +48,7 @@ def hapus_barang():
     if 0 <= index < len(data):
         del data[index]
         save_data(data)
-        print("✅ Barang berhasil dihapus.")
+        print("Barang berhasil dihapus.")
     else:
         print("Nomor tidak valid.")
 
@@ -56,8 +56,8 @@ def laporan_ringkas():
     data = load_data()
     total_barang = len(data)
     total_nilai = sum(item['stok'] * item['harga'] for item in data)
-    print(f"\n📊 Total barang: {total_barang}")
-    print(f"💰 Total nilai inventori: Rp{total_nilai:.2f}")
+    print(f"\nTotal barang: {total_barang}")
+    print(f"Total nilai inventori: Rp{total_nilai:.2f}")
 
 def menu():
     while True:
