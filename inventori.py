@@ -20,11 +20,11 @@ def tambah_barang():
     data = load_data()
     data.append({"nama": nama, "stok": stok, "harga": harga})
     save_data(data)
-    print("✅ Barang berhasil ditambahkan.")
+    print("Barang berhasil ditambahkan.")
 
 def tampilkan_barang():
     data = load_data()
-    print("\n📦 Daftar Barang:")
+    print("\nDaftar Barang:")
     for i, barang in enumerate(data):
         print(f"{i+1}. {barang['nama']} - Stok: {barang['stok']}, Harga: Rp{barang['harga']:.2f}")
 
@@ -37,9 +37,9 @@ def edit_barang():
         data[index]['stok'] = int(input("Stok baru: "))
         data[index]['harga'] = float(input("Harga baru: "))
         save_data(data)
-        print("✅ Barang berhasil diedit.")
+        print("Barang berhasil diedit.")
     else:
-        print("❌ Nomor tidak valid.")
+        print("Nomor tidak valid.")
 
 def hapus_barang():
     tampilkan_barang()
@@ -50,7 +50,7 @@ def hapus_barang():
         save_data(data)
         print("✅ Barang berhasil dihapus.")
     else:
-        print("❌ Nomor tidak valid.")
+        print("Nomor tidak valid.")
 
 def laporan_ringkas():
     data = load_data()
@@ -61,7 +61,7 @@ def laporan_ringkas():
 
 def menu():
     while True:
-        print("\n📘 Menu Aplikasi Inventori")
+        print("\n Menu Aplikasi Inventori")
         print("1. Tambah Barang")
         print("2. Tampilkan Barang")
         print("3. Edit Barang")
@@ -81,9 +81,9 @@ def menu():
         elif pilihan == "5":
             laporan_ringkas()
         elif pilihan == "6":
-            print("👋 Keluar dari aplikasi.")
+            print("Keluar dari aplikasi.")
             break
         else:
-            print("❌ Pilihan tidak valid.")
+            print("Pilihan tidak valid.")
 
 menu()
